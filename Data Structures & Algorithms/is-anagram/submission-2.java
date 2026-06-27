@@ -1,0 +1,26 @@
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        if(s.length()!=t.length())
+        {
+            return false;
+
+        }
+        HashMap<Character,Integer>arthi=new HashMap<>();
+        HashMap<Character,Integer>abi=new HashMap<>();
+        for(char i=0;i<s.length();i++)
+        {
+            arthi.put(s.charAt(i),arthi.getOrDefault(s.charAt(i),0)+1);
+            abi.put(t.charAt(i),abi.getOrDefault(t.charAt(i),0)+1);
+        }
+           return arthi.equals(abi);
+    
+    
+    
+        
+
+
+
+        
+
+    }
+}
